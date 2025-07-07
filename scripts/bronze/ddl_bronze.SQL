@@ -1,3 +1,13 @@
+/*
+===========================================================================================
+This script creates the bronze layer tables with column names in sync with the csv 
+naming. The IF statement makes it easier to edit changes to the table as when executed 
+instead of creating a new table, it drops the old one and creates the new one in its place.
+===========================================================================================
+*/
+
+
+
 USE DataWarehouse;
 
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
@@ -62,7 +72,7 @@ CREATE TABLE bronze.erp_px_cat_g1v2 (
 	maintainance NVARCHAR(50),
 );
 
---BULK INSERT won't work if using dbeaver, you have to manually load data by right-clicking on the table you want to insert in
+/* BULK INSERT won't work if using dbeaver, you have to manually load data by right-clicking on the table you want to insert in */
 BULK INSERT bronze.crm_cust_info
 FROM '/home/meherin/Desktop/sql-data-warehouse-project/datasets/source_crm'
 WITH (
