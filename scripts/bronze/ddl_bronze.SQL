@@ -72,7 +72,7 @@ CREATE TABLE bronze.erp_px_cat_g1v2 (
 	maintainance NVARCHAR(50),
 );
 
-/* BULK INSERT won't work if using dbeaver, you have to manually load data by right-clicking on the table you want to insert in */
+/* BULK INSERT won't work if using dbeaver, you have to manually load data by right-clicking on the table you want to insert in
 BULK INSERT bronze.crm_cust_info
 FROM '/home/meherin/Desktop/sql-data-warehouse-project/datasets/source_crm'
 WITH (
@@ -80,3 +80,4 @@ WITH (
 	FIELDTERMINATOR = ',',
 	TABLOCK
 );
+*/
